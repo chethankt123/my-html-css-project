@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Detailed HTML Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #796e6e;
+        }
+        .form-container {
+            width: 600px;
+            margin: 30px auto;
+            background: #d1d0f5;
+            padding: 20px;
+            border-radius: 8px;
+        }
+        h2 {
+            text-align:center;
+        }
+        label {
+            display:block;
+            margin-top: 12px;
+            font-weight: bold;
+        }
+        input, select, textarea {
+            width: 100%;
+            padding: 8px;
+            margin-top: 5px;
+        }
+        .inline {
+            width: auto;
+            margin-right: 10px;
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        .buttons {
+            text-align: center;
+            margin-top: 20px;
+        }
+        button {
+            padding: 10px 20px;
+            margin: 5px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="form-container">
+    <h2>Registration Form</h2>
+
+    <form action="submit.php" method="post" enctype="multipart/form-data">
+
+        <!-- Text Input -->
+        <div class="form-group">
+            <label for="fullname">Full Name</label>
+            <input type="text" id="fullname" name="fullname" placeholder="Enter your name" required>
+        </div>
+
+        <!-- Email -->
+        <div class="form-group">
+            <label for="email">Email Address</label>
+            <input type="email" id="email" name="email" placeholder="example@email.com" required>
+        </div>
+
+        <!-- Password -->
+        <div class="form-group">
+            <label for="password">Password</label>
+            <input type="password" id="password" name="password" required>
+        </div>
+
+        <!-- Radio Buttons -->
+        <div class="form-group">
+            <label>Gender</label>
+            <input type="radio" class="inline" name="gender" value="male"> Male
+            <input type="radio" class="inline" name="gender" value="female"> Female
+            <input type="radio" class="inline" name="gender" value="other"> Other
+        </div>
+
+        <!-- Checkboxes -->
+        <div class="form-group">
+            <label>Skills</label>
+            <input type="checkbox" class="inline" name="skills[]" value="html"> HTML
+            <input type="checkbox" class="inline" name="skills[]" value="css"> CSS
+            <input type="checkbox" class="inline" name="skills[]" value="javascript"> JavaScript
+        </div>
+
+        <!-- Dropdown -->
+        <div class="form-group">
+            <label for="country">Country</label>
+            <select id="country" name="country">
+                <option value="">--Select Country--</option>
+                <option value="india">India</option>
+                <option value="usa">USA</option>
+                <option value="uk">UK</option>
+            </select>
+        </div>
+
+        <!-- Date -->
+        <div class="form-group">
+            <label for="dob">Date of Birth</label>
+            <input type="date" id="dob" name="dob">
+        </div>
+
+        <!-- Textarea -->
+        <div class="form-group">
+            <label for="about">About You</label>
+            <textarea id="about" name="about" rows="4" placeholder="Write something about yourself..."></textarea>
+        </div>
+
+        <!-- File Upload -->
+        <div class="form-group">
+            <label for="resume">Upload Resume</label>
+            <input type="file" id="resume" name="resume">
+        </div>
+
+        <!-- Buttons -->
+        <div class="buttons">
+            <button type="submit">Submit</button>
+            <button type="reset">Reset</button>
+        </div>
+
+    </form>
+</div>
+
+</body>
+</html>
